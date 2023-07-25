@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.UUID;
 
 @RestController
@@ -18,13 +19,19 @@ public class DataPembeliController {
     private PembeliService pembeliService;
 
     @PostMapping("/post/pembeli")
-    private ResponseEntity<MessageModel> addSales(@RequestBody Pembeli pembeli) {
+    private ResponseEntity<MessageModel> addSales(@RequestBody List<Pembeli> pembeli) {
         ResponseEntity responseEntity = pembeliService.addDataPembeli(pembeli);
         return responseEntity;
     }
     @DeleteMapping("/delete/pembeli")
     private ResponseEntity<MessageModel> addSales(@RequestBody UUID idPembeli) {
         ResponseEntity responseEntity = pembeliService.deleteDataPembeli(idPembeli);
+        return responseEntity;
+    }
+
+    @GetMapping("/get/pembeli")
+    public ResponseEntity getDataPembeli(@RequestParam UUID idPembeli){
+        ResponseEntity responseEntity = pembeliService.getDataPembeli(idPembeli);
         return responseEntity;
     }
 }

@@ -24,11 +24,11 @@ public class Transaksi {
     @Column(name = "id_transaksi")
     private UUID idTransaksi;
 
-    @ManyToOne
+    @Column
     @JoinColumn(name = "id_barang")
     private Barang barang;
 
-    @ManyToOne
+    @Column
     @JoinColumn(name = "id_pembeli")
     private Pembeli pembeli;
 

@@ -19,7 +19,7 @@ public class Pembeli2 {
     @Column(name = "total_bayar")
     private UUID totalBayar;
 
-    @ManyToOne
+    @Column
     @JoinColumn(name = "id_transaksi")
     private Transaksi transaksi;
 }

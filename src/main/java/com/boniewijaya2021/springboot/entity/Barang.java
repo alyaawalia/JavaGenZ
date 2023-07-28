@@ -32,7 +32,7 @@ public class Barang {
     @Column(name = "stok")
     private UUID stok;
 
-    @ManyToOne
-    @JoinColumn(name = "id_supplier")
-    private Supplier suplier;
+
+    @Column(name = "id_supplier")
+    private UUID idSupplier;
 }

@@ -15,6 +15,7 @@ com\boniewijaya2021\springboot\repository\DataPembeliRepository.class
 com\boniewijaya2021\springboot\repository\SalesRepositoryClass.class
 com\boniewijaya2021\springboot\entity\Supplier.class
 com\boniewijaya2021\springboot\utility\MessageModel.class
+com\boniewijaya2021\springboot\pojo\ParamInsertTransaksi.class
 com\boniewijaya2021\springboot\pojo\SalesPostPojo.class
 com\boniewijaya2021\springboot\service\SalesPostService.class
 com\boniewijaya2021\springboot\repository\SalesRepository.class

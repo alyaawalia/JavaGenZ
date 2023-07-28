@@ -2,6 +2,7 @@ package com.boniewijaya2021.springboot.service;
 
 import com.boniewijaya2021.springboot.entity.Pembeli;
 import com.boniewijaya2021.springboot.entity.Transaksi;
+import com.boniewijaya2021.springboot.pojo.ParamInsertTransaksi;
 import com.boniewijaya2021.springboot.repository.DataTransaksiRepository;
 import com.boniewijaya2021.springboot.utility.MessageModel;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,13 +19,13 @@ public class TransaksiService {
     @Autowired
     private DataTransaksiRepository dataTransaksiRepository;
 
-    public ResponseEntity<MessageModel> addDataTransaksi (Transaksi transaksi)
+    public ResponseEntity<MessageModel> addDataTransaksi(ParamInsertTransaksi transaksi)
     {
         Map<String, Object> result = new HashMap<>();
         MessageModel msg = new MessageModel();
 
         try{
-            dataTransaksiRepository.save(transaksi);
+//            dataTransaksiRepository.save(transaksi);
             msg.setStatus(true);
             msg.setMessage("Success");
             result.put("data", transaksi);

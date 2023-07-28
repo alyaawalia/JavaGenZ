@@ -2,6 +2,7 @@ package com.boniewijaya2021.springboot.controller;
 
 import com.boniewijaya2021.springboot.entity.Pembeli;
 import com.boniewijaya2021.springboot.entity.Transaksi;
+import com.boniewijaya2021.springboot.pojo.ParamInsertTransaksi;
 import com.boniewijaya2021.springboot.service.TransaksiService;
 import com.boniewijaya2021.springboot.utility.MessageModel;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,7 @@ public class DataTransaksiController {
     private TransaksiService transaksiService;
 
     @PostMapping("/post/transaksi")
-    private ResponseEntity<MessageModel> addSales(@RequestBody Transaksi transaksi) {
+    private ResponseEntity<MessageModel> addSales(@RequestBody ParamInsertTransaksi transaksi) {
         ResponseEntity responseEntity = transaksiService.addDataTransaksi(transaksi);
         return responseEntity;
     }
